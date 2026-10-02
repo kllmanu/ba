@@ -1,0 +1,18 @@
+/* Custom progress bar styles */
+.reveal .progress {
+  height: 8px;
+}
+
+/* Move Reveal.js progress bar to the top */
+.reveal .progress {
+  top: 0;
+  bottom: auto;
+}
+
+.reveal .progress span {
+	background-color: #2a76dd;
+}
+
+b, strong {
+	color: #2a76dd !important;
+}

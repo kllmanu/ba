@@ -1,0 +1,17 @@
+author: "Manuel Koell"
+date: today
+
+project:
+  title: "Aufgabenerstellung mit Quarto und Export nach QTI 3.0 für ILIAS"
+  output-dir: public
+  type: book
+
+format: 
+  revealjs:
+    max-scale: 1.25
+    progress: true
+    css: custom.css
+    slide-number: true
+
+bibliography: references.bib
+csl: ieee.csl
