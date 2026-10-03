@@ -1,0 +1,43 @@
+# Literaturverzeichnis {.unnumbered}
+
+::: {#refs}
+:::
+
+\clearpage
+
+# Nutzung von KI-Anwendungen
+
+Ich deklariere, den Chatbot /Gemini/ für meine Arbeit verwendet zu
+haben, um eine Gliederung zu erstellen, die ich in meiner Arbeit
+entsprechend der von mir gesetzten Schwerpunkte angepasst und
+weiterentwickelt habe.
+
+Darüber hinaus habe ich /Gemini/ für die Literaturrecherche zu Beginn
+meiner Arbeit genutzt. 
+
+Verwendeter Prompt, Datum
+
+# Eidesstattliche Erklärung
+
+Hiermit versichere ich, dass ich die vorliegende Arbeit/meinen
+gekennzeichneten Teil der Arbeit (bei Gruppenarbeiten) selbständig und
+ohne unerlaubte Hilfe angefertigt und nur die in der Arbeit
+angegebenen Hilfsmittel benutzt habe.
+
+Ich versichere, dass diese Arbeit nicht gegen rechtliche
+Datenschutzbestimmungen (DSGVO, DSG) verstößt, keine
+Persönlichkeitsrechte verletzt und dass ich sämtliche urheber-,
+lizenz- sowie bildrechtlichen Angaben getätigt habe. Alle Stellen, die
+wörtlich oder sinngemäß aus anderen Schriften entnommen sind, habe ich
+als solche kenntlich gemacht. Zudem versichere ich, dass die
+vorliegende Arbeit noch nicht in gleicher Form oder auszugsweise im
+Rahmen einer anderen Prüfung oder als Lehrveranstaltungsleistung
+vorgelegt wurde. Ich erkläre weiters, dass ein verantwortungsbewusster
+Umgang mit KI Tools erfolgt ist und die Verantwortung für den Text bei
+mir liegt.
+
+\vspace{2cm}
+\hfill\includegraphics[width=0.4\linewidth]{assets/id_austria}
+
+\noindent
+{{< meta location >}}, am {{< meta date >}}\hfill {{< meta author >}}

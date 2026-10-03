@@ -1,0 +1,5 @@
+book:
+  output-file: "kurzfassung_mko7395"
+  chapters:
+    - index.qmd
+    - commented.qmd

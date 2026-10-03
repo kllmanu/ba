@@ -1,0 +1,58 @@
+# Kurzreferat {.unlisted .unnumbered}
+
+## Aufgabenerstellung mit Quarto und Export nach QTI 3.0 für ILIAS {.unlisted .unnumbered}
+
+Die Erstellung von Prüfungsaufgaben für Learning-Management-Systeme
+(LMS) ist häufig mit proprietären, browsergebundenen Editoren
+verbunden, die keine Versionierung, Wiederverwendbarkeit oder
+programmatische Generierung von Aufgaben unterstützen. Der Question &
+Test Interoperability (QTI) 3.0-Standard des 1EdTech Consortium
+definiert ein offenes XML-basiertes Austauschformat für Prüfungsfragen
+und - tests, das von modernen LMS wie ILIAS unterstützt wird.
+
+Das Werkzeug Quarto bietet eine auf Markdown und Literate Programming
+basierende Dokumentenplattform, mit der technische und
+wissenschaftliche Inhalte reproduzierbar und versionierbar erstellt
+werden können. Bislang existiert jedoch keine ausgereifte Lösung, die
+es ermöglicht, Quarto-Dokumente direkt zur Aufgabenerstellung im
+QTI-3.0-Format zu nutzen und diese in ILIAS zu importieren.
+
+Ziel dieser Bachelorarbeit ist die Konzeption und prototypische
+Implementierung einer Erweiterung, die es Lehrenden ermöglicht,
+Prüfungsaufgaben verschiedener Fragetypen in einem Quarto-Dokument zu
+verfassen und als valides QTI-3.0-Paket zu exportieren, das
+anschließend verlustfrei in ILIAS importiert werden kann.
+
+\clearpage
+
+# Abstract {.unlisted .unnumbered}
+
+## Creating Exercises with Quarto and Exporting to QTI 3.0 for ILIAS {.unlisted .unnumbered}
+
+Creating assessment tasks for Learning Management Systems (LMS) often
+involves proprietary, browser-based editors that lack support for
+versioning, reusability, or the programmatic generation of tasks. The
+Question & Test Interoperability (QTI) 3.0 standard from the 1EdTech
+Consortium defines an open, XML-based exchange format for assessment
+questions and tests that is supported by modern LMS platforms such as
+ILIAS.
+
+Quarto is a document platform based on Markdown and literate
+programming that enables the creation of technical and scientific
+content in a reproducible and version-controlled manner. However,
+there is currently no mature solution that allows Quarto documents to
+be used directly for creating tasks in the QTI 3.0 format and
+importing them into ILIAS.
+
+The aim of this bachelor's thesis is to design and implement a
+prototype extension that enables instructors to author assessment
+tasks of various question types within a Quarto document and export
+them as a valid QTI 3.0 package, which can subsequently be imported
+into ILIAS without data loss.
+
+\clearpage
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+\tableofcontents
+\newpage

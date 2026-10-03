@@ -1,0 +1,56 @@
+\documentclass[a4paper,12pt,twoside]{scrreprt}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}    % Silbentrennung bei Sonderzeichen
+\usepackage{graphicx}       % Bilder einbinden
+\usepackage[ngerman]{babel} % Deutsche Sprachanpassungen
+\usepackage{csquotes}       % When using babel or polyglossia with biblatex, loading csquotes is recommended to ensure that quoted texts are typeset according to the rules of your main language.
+\usepackage{acronym}  % für optionales Abkürzungsverzeichnis
+\usepackage{eurosym}  % z. B. \EUR{12345,68}
+\usepackage{hyperref} % Links z. B. \href{https://www.wikibooks.org}{Wikibooks home}
+\usepackage[bindingoffset=8mm]{geometry}% Bindeverlust von 8mm einbeziehen. Mit dem geometry-Paket können Sie die Ränder auch ganz individuell anpassen.
+\usepackage{caption} % Abbildungslegenden
+\usepackage[a-2b,mathxmp]{pdfx}[2018/12/22]
+
+\graphicspath{{assets/}{assets/images/}}
+\hypersetup{
+    colorlinks=false, % Keeps colored boxes around links instead of coloring text
+    linkbordercolor=red, % Sets the box border color to red
+    linktocpage=true % Applies the links (and red boxes) specifically to page numbers in the TOC
+}
+
+\begin{document}
+    \thispagestyle{empty}
+    \begin{titlepage}
+        \begin{flushright}
+            \includegraphics[width=0.4\linewidth]{logo}
+        \end{flushright}
+
+        \begin{flushleft}
+            \section*{$title$}
+            \subsection*{$subtitle$}
+            \vspace{1cm}
+
+            Bachelorarbeit\\
+            zur Erlangung des akademischen Grades
+            \vspace{0.5cm}
+
+            \textbf{Bachelor of Science in Engineering (BSc)}
+
+            \vspace{1cm}
+            Fachhochschule Vorarlberg\newline
+            Informatik — Software and Information Engineering
+
+            \vspace{2.5cm}
+            Vorgelegt von\\
+            {$author$} \small\texttt{<{$email$>}}\\
+            {$location$}, {$date$}
+
+            \vspace{3.5cm}
+            Betreut von\newline
+            {$advisor$}
+        \end{flushleft}
+    \end{titlepage}
+
+    $body$
+\end{document}

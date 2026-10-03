@@ -1,10 +1,26 @@
+---
+title: "Aufgabenerstellung mit Quarto und Export nach QTI 3.0 für ILIAS"
+subtitle: "Konzeption und prototypische Implementierung einer Erweiterung"
+author: "Manuel Koell"
+date: 2026-10-20
+format: 
+  revealjs:
+    max-scale: 1.25
+    progress: true
+    slide-number: true
+    embed-resources: true
+    css: assets/custom.css
+    output-file: presentation.html
+bibliography: assets/references.bib
+csl: assets/ieee.csl
+---
+
 ## Integrierte Lern-, Informations- und Arbeitskooperations-System
 
-![](assets/chloe.gif)
+![](assets/images/chloe.gif)
 
 ## ILIAS
 
-- Erscheinungsjahr [1998](https://www.youtube.com/watch?v=zdKBjSL2gUg)
 - europäische Software 🇪🇺
 - **Multi-Page-Application (MPA)**
 - tausende aktive Installationen
@@ -13,12 +29,12 @@
 
 ## ILIAS für Studierende
 
-![](assets/ilias2.png)
+![](assets/images/ilias2.png)
 
 ## ILIAS für Lehrende
 
 ::: {#clicks}
-![](assets/clicks.gif){width="100%"}
+![](assets/images/clicks.gif){width="100%"}
 
 [Report: Creating Question (ILIAS Test & Assessment)](https://github.com/catenglaender/public-notes/blob/main/ILIAS-development/2023/Creating-Questions-in-TA/Report_Creating-Questions-in-TA.md)
 :::
@@ -35,7 +51,7 @@ Hohe Interaktionskosten [@InteractionCostDefinition]
 
 Schwachstelle bzw. ungelöstes Problem im aktuellen Stand
 
-![](assets/ux-vs-design.jpg)
+![](assets/images/ux-vs-design.jpg)
 
 ## Aufgabenstellung
 
@@ -50,7 +66,7 @@ und **um sie ins ILIAS per QTI 3.0 zu importieren**.
 
 ## Herangehensweise
 
-![](assets/markdown2qti.png)
+![](assets/images/markdown2qti.png)
 
 :::{style="font-size:60%"}
 ### Post-Render [@postRender]
@@ -111,7 +127,7 @@ blablbla
 
 ## xkcd on Standards [@XkcdStandards] 
 
-![](assets/standards_2x.png)
+![](assets/images/standards_2x.png)
 
 siehe RFC 7763 [@RFC7763Text] und 7764 [@RFC7764Guidance]
 

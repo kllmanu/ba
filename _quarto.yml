@@ -1,17 +1,25 @@
+title: "Aufgabenerstellung mit Quarto und Export nach QTI 3.0 für ILIAS"
+subtitle: "Konzeption und prototypische Implementierung einer Erweiterung"
 author: "Manuel Koell"
+email: "mko7395@students.fhv.at"
+advisor: "Mag. Dr. Peter REITER, Bakk."
+location: "Dornbirn"
 date: today
+date-format: "MMMM YYYY"
+lang: de
 
 project:
-  title: "Aufgabenerstellung mit Quarto und Export nach QTI 3.0 für ILIAS"
-  output-dir: public
   type: book
+  output-dir: docs
+  post-render: 
+    - bash -c "rm pdfa.xmpi"
 
-format: 
-  revealjs:
-    max-scale: 1.25
-    progress: true
-    css: custom.css
-    slide-number: true
+format:
+  pdf:
+    template: templates/titlepage.tex
+    latex-auto-install: true
+    pdf-engine: pdflatex
+    # keep-tex: true
 
-bibliography: references.bib
-csl: ieee.csl
+bibliography: assets/references.bib
+csl: assets/ieee.csl

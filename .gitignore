@@ -1,2 +1,9 @@
 .quarto/
 public/
+
+*.xmpi
+*.log
+*.tex
+
+/.quarto/
+**/*.quarto_ipynb

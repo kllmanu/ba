@@ -1,0 +1,10 @@
+book:
+  output-file: "bachelorarbeit_mko7395"
+  chapters:
+    - index.qmd
+    - thesis/01-einleitung.qmd
+    - thesis/02-stand-der-technik.qmd
+    - thesis/03-aufgabenstellung.qmd
+    - thesis/04-methodik.qmd
+    - thesis/05-umsetzung.qmd
+    - appendix.qmd
