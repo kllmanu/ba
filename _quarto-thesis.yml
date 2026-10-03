@@ -1,3 +1,9 @@
+project:
+  type: book
+  output-dir: docs
+  post-render: 
+    - bash -c "rm pdfa.xmpi"
+
 book:
   output-file: "bachelorarbeit_mko7395"
   chapters:
@@ -8,3 +14,10 @@ book:
     - thesis/04-methodik.qmd
     - thesis/05-umsetzung.qmd
     - appendix.qmd
+
+format:
+  pdf:
+    template: templates/titlepage.tex
+    latex-auto-install: true
+    pdf-engine: pdflatex
+    # keep-tex: true

@@ -1,5 +1,18 @@
+project:
+  type: book
+  output-dir: docs
+  post-render: 
+    - bash -c "rm pdfa.xmpi"
+
 book:
   output-file: "kurzfassung_mko7395"
   chapters:
     - index.qmd
     - commented.qmd
+
+format:
+  pdf:
+    template: templates/titlepage.tex
+    latex-auto-install: true
+    pdf-engine: pdflatex
+    # keep-tex: true

@@ -1,5 +1,5 @@
 .quarto/
-public/
+docs/assets/
 
 *.xmpi
 *.log

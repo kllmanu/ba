@@ -1,20 +1,3 @@
----
-title: "Aufgabenerstellung mit Quarto und Export nach QTI 3.0 für ILIAS"
-subtitle: "Konzeption und prototypische Implementierung einer Erweiterung"
-author: "Manuel Koell"
-date: 2026-10-20
-format: 
-  revealjs:
-    max-scale: 1.25
-    progress: true
-    slide-number: true
-    embed-resources: true
-    css: assets/custom.css
-    output-file: presentation.html
-bibliography: assets/references.bib
-csl: assets/ieee.csl
----
-
 ## Integrierte Lern-, Informations- und Arbeitskooperations-System
 
 ![](assets/images/chloe.gif)

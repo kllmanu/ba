@@ -1,0 +1,16 @@
+date: 2026-10-20
+date-format: "YYYY-MM-DD"
+subtitle: ""
+project:
+  type: default
+  output-dir: docs
+  post-render: "rm -rf docs/assets"
+
+format: 
+  revealjs:
+    max-scale: 1.25
+    progress: true
+    slide-number: true
+    embed-resources: true
+    css: assets/custom.css
+    output-file: index.html

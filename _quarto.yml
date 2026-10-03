@@ -7,19 +7,5 @@ location: "Dornbirn"
 date: today
 date-format: "MMMM YYYY"
 lang: de
-
-project:
-  type: book
-  output-dir: docs
-  post-render: 
-    - bash -c "rm pdfa.xmpi"
-
-format:
-  pdf:
-    template: templates/titlepage.tex
-    latex-auto-install: true
-    pdf-engine: pdflatex
-    # keep-tex: true
-
 bibliography: assets/references.bib
 csl: assets/ieee.csl
