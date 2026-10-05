@@ -2,8 +2,6 @@ date: "2027-07-07"
 project:
   type: book
   output-dir: docs
-  post-render: 
-    - bash -c "rm pdfa.xmpi"
 
 book:
   output-file: "bachelorarbeit_mko7395"
