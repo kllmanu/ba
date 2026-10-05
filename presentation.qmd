@@ -1,3 +1,5 @@
+# 1. Stand der Technik
+
 ## Integrierte Lern-, Informations- und Arbeitskooperations-System
 
 ![](assets/images/chloe.gif)
@@ -36,6 +38,8 @@ Schwachstelle bzw. ungelöstes Problem im aktuellen Stand
 
 ![](assets/images/ux-vs-design.jpg)
 
+# 2. Aufgabenstellung
+
 ## Aufgabenstellung
 
 **Als Lehrkraft** möchte ich Prüfungsfragen in einer Markdown-Datei erstellen
@@ -52,7 +56,7 @@ und **um sie ins ILIAS per QTI 3.0 zu importieren**.
 ![](assets/images/markdown2qti.png)
 
 :::{style="font-size:60%"}
-### Post-Render [@postRender]
+Post-Render [@postRender]
 
 1. Validieren mit `$ xmllint --noout --schema schema.xsd aufgaben.xml`
 2. Zusammen mit `imsmanifest.xml` zippen mit `zip -r ../aufgaben.zip .`
@@ -75,13 +79,13 @@ ILIAS kann QTI 3.0 Dateien importieren und exportieren
 <qti-assessment-item xmlns="http://www.imsglobal.org/xsd/imsqtias_v3p0">
 
   <qti-item-body>
-    <p>Wie viele Bytes hat ein Megabyte?</p>
+    <p>Was ist die Hauptstadt von Frankreich?</p>
 
-    <qti-choice-interaction response-identifier="RESPONSE" shuffle="false" max-choices="1">
-      <qti-simple-choice identifier="CHOICE_1">2^20 = 1.048.576 Bytes</qti-simple-choice>
-      <qti-simple-choice identifier="CHOICE_2">10^9 = 1.000.000.000 Bytes</qti-simple-choice>
-      <qti-simple-choice identifier="CHOICE_3">2^30 = 1.073.741.824 Bytes</qti-simple-choice>
-      <qti-simple-choice identifier="CHOICE_4">10^6 = 1.000.000 Bytes</qti-simple-choice>
+    <qti-choice-interaction>
+      <qti-simple-choice>Madrid</qti-simple-choice>
+      <qti-simple-choice>Berlin</qti-simple-choice>
+      <qti-simple-choice>Paris</qti-simple-choice>
+      <qti-simple-choice>Rom</qti-simple-choice>
     </qti-choice-interaction>
   </qti-item-body>
 
@@ -118,6 +122,8 @@ siehe RFC 7763 [@RFC7763Text] und 7764 [@RFC7764Guidance]
 fragmentiert
 :::
 
+# 3. Methodik und Umsetzung 
+
 ## Quarto-Erweiterung
 
 techn. wissenschaftliches Publishing-System
@@ -136,14 +142,14 @@ quarto-project/
 - Custom Format
 - Pandoc Filter
 
-## Prüfungsfragen per KI generieren
+## Prüfungsfragen (bequem) per KI generieren
 
 - KI per `/skill` instruieren [@skills]
 - Markdown ist leichter zu lesen als XML
 - **Evaluierung der Fragen muss trotzdem stattfinden**
 - die Quarto-Erweiterung verhält sich stets deterministisch
 
-## Literaturverzeichnis
+# Literaturverzeichnis
 
 ::: {#refs}
 :::

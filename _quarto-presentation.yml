@@ -11,6 +11,7 @@ format:
     max-scale: 1.25
     progress: true
     slide-number: true
+    navigation-mode: vertical
     embed-resources: true
     css: assets/custom.css
     output-file: index.html
