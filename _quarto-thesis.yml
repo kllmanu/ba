@@ -20,5 +20,4 @@ format:
   pdf:
     template: templates/titlepage.tex
     latex-auto-install: true
-    pdf-engine: pdflatex
     # keep-tex: true
