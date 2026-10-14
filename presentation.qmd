@@ -1,3 +1,5 @@
+![](assets/images/vscode.png)
+
 # 1. Stand der Technik
 
 ## Integrierte Lern-, Informations- und Arbeitskooperations-System
@@ -12,11 +14,11 @@
 - Millionen von Nutzer:innen
 - ca. 2 Mio. LOC
 
-## ILIAS für Studierende
+## Prüfungen im ILIAS ablegen
 
 ![](assets/images/ilias2.png)
 
-## ILIAS für Lehrende
+## Prüfungsfragen im ILIAS anlegen
 
 ::: {#clicks}
 ![](assets/images/clicks.gif){width="100%"}
@@ -32,37 +34,13 @@ Mentale Modelle [@MentalModelsUser]
 Hohe Interaktionskosten [@InteractionCostDefinition]
 : Beschreibt die Summe des physischen und mentalen Aufwands, den ein Nutzer aufbringen muss, um ein bestimmtes Ziel mit einem System zu erreichen
 
-## Forschungslücke
-
-Schwachstelle bzw. ungelöstes Problem im aktuellen Stand
+---
 
 ![](assets/images/ux-vs-design.jpg)
 
-# 2. Aufgabenstellung
+---
 
-## Aufgabenstellung
-
-**Als Lehrkraft** möchte ich Prüfungsfragen in einer Markdown-Datei erstellen
-
-- um von einer besseren Bedienbarkeit zu profitieren
-- meine Fragen unter Versionskontrolle zu stellen
-- sie programmatisch generieren zu lassen (LLM)
-- evtl. zur Wiederverwendbarkeit oder Automatisierung [@iliasREST]
-
-und **um sie ins ILIAS per QTI 3.0 zu importieren**.
-
-## Herangehensweise
-
-![](assets/images/markdown2qti.png)
-
-:::{style="font-size:60%"}
-Post-Render [@postRender]
-
-1. Validieren mit `$ xmllint --noout --schema schema.xsd aufgaben.xml`
-2. Zusammen mit `imsmanifest.xml` zippen mit `zip -r ../aufgaben.zip .`
-:::
-
-## QTI 3.0?
+## Alternative: QTI
 
 Question and Test Interoperability (QTI) specification
 
@@ -93,6 +71,23 @@ ILIAS kann QTI 3.0 Dateien importieren und exportieren
 </qti-assessment-item>
 ```
 
+## Forschungslücke?
+
+Schwachstelle bzw. ungelöstes Problem im aktuellen Stand
+
+1. ILIAS ist schwierig zu bedienen
+2. XML ist schwierig zu lesen
+
+# 2. Aufgabenstellung
+
+## Aufgabenstellung
+
+Als Lehrkraft möchte ich Prüfungsfragen mit Markdown erstellen
+um sie ins ILIAS per QTI 3.0 zu importieren.
+
+1. **"weil's bequemer isch"**
+2. um Fragen per KI generieren zu lassen
+
 ## Anforderungsanalyse
 
 1. Nur die wichtigsten *Interaction Types* [@interactionTypes]
@@ -103,26 +98,23 @@ ILIAS kann QTI 3.0 Dateien importieren und exportieren
 2. Well-formed und valides XML [@wellformedValidXml]
 3. Keine Ausgabe in andere Formate (HTML, PDF) erforderlich
 
-## Markdown
+## Berechtigte Kritik
 
-```markdown
-# Hello, world
+- Warum nicht einfach das bestehende UI überarbeiten?
+- Warum nicht einfach die KI ein QTI-Paket erstellen lassen?
 
-blablbla
+# 3. Methodik
 
-```
+## Herangehensweise
 
-## xkcd on Standards [@XkcdStandards] 
+![](assets/images/markdown2qti.png)
 
-![](assets/images/standards_2x.png)
+:::{style="font-size:60%"}
+Post-Render [@postRender]
 
-siehe RFC 7763 [@RFC7763Text] und 7764 [@RFC7764Guidance]
-
-::: notes
-fragmentiert
+1. Validieren mit `$ xmllint --noout --schema schema.xsd aufgaben.xml`
+2. Zusammen mit `imsmanifest.xml` zippen mit `zip -r ../aufgaben.zip .`
 :::
-
-# 3. Methodik und Umsetzung 
 
 ## Quarto-Erweiterung
 
@@ -142,12 +134,24 @@ quarto-project/
 - Custom Format
 - Pandoc Filter
 
-## Prüfungsfragen (bequem) per KI generieren
+## xkcd on Standards [@XkcdStandards] 
 
-- KI per `/skill` instruieren [@skills]
+![](assets/images/standards_2x.png)
+
+siehe RFC 7763 [@RFC7763Text] und 7764 [@RFC7764Guidance]
+
+::: notes
+fragmentiert
+:::
+
+# Prüfungsfragen per KI generieren
+
+![](assets/images/skill.png)
+
+<!-- - KI per `/skill` instruieren [@skills]
 - Markdown ist leichter zu lesen als XML
 - **Evaluierung der Fragen muss trotzdem stattfinden**
-- die Quarto-Erweiterung verhält sich stets deterministisch
+- die Quarto-Erweiterung verhält sich stets deterministisch -->
 
 # Literaturverzeichnis
 
