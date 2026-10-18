@@ -1,4 +1,10 @@
-![](assets/images/vscode.png)
+# LENA
+**L**LM-gestützte **E**rstellung und **N**achbearbeitung von **A**ufgaben
+
+::: notes
+INNA, Indoor Navigation, herinnen (Dialekt)
+ISO 9241-110 Selbstbeschreibungsfähigkeit
+:::
 
 # 1. Stand der Technik
 
@@ -12,7 +18,6 @@
 - **Multi-Page-Application (MPA)**
 - tausende aktive Installationen
 - Millionen von Nutzer:innen
-- ca. 2 Mio. LOC
 
 ## Prüfungen im ILIAS ablegen
 
@@ -40,118 +45,119 @@ Hohe Interaktionskosten [@InteractionCostDefinition]
 
 ---
 
-## Alternative: QTI
+## QTI
 
 Question and Test Interoperability (QTI) specification
 
-> Er definiert ein **einheitliches XML-Format**, mit dem Testfragen, Antworten,
-> Auswertungsschemata und komplette Prüfungen **plattformunabhängig** gespeichert
-> und ausgetauscht werden können.
+- einheitliches XML-Format, plattformunabhängig (lol)
+- für Fragen, Antworten, Auswertungen, Prüfungen
 
-ILIAS kann QTI 3.0 Dateien importieren und exportieren
+ILIAS kann QTI Dateien **importieren** und exportieren
+
+::: notes
+ist alles andere als plattformunabhängig; 
+Standards sind dazu da um gebrochen zu werden;
+jeder kocht sein eigenes Süppchen;
+:::
 
 ## Beispiel: qti.xml
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<qti-assessment-item xmlns="http://www.imsglobal.org/xsd/imsqtias_v3p0">
-
-  <qti-item-body>
-    <p>Was ist die Hauptstadt von Frankreich?</p>
-
-    <qti-choice-interaction>
-      <qti-simple-choice>Madrid</qti-simple-choice>
-      <qti-simple-choice>Berlin</qti-simple-choice>
-      <qti-simple-choice>Paris</qti-simple-choice>
-      <qti-simple-choice>Rom</qti-simple-choice>
-    </qti-choice-interaction>
-  </qti-item-body>
-
-  ...
-</qti-assessment-item>
+<!DOCTYPE questestinterop SYSTEM "ims_qtiasiv1p2p1.dtd">
+<questestinterop>
+  <item ident="frage1" title="Hauptstadt">
+    <presentation>
+      <material><mattext>Was ist die Hauptstadt von Frankreich?</mattext></material>
+      <response_lid ident="antwort" rcardinality="Single">
+        <render_choice>
+          <response_label ident="Berlin">
+            <material><mattext>Berlin</mattext></material>
+          </response_label>
+          <response_label ident="Madrid">
+            <material><mattext>Madrid</mattext></material>
+          </response_label>
+          <response_label ident="Paris">
+            <material><mattext>Paris</mattext></material>
+          </response_label>
+        </render_choice>
+      </response_lid>
+    </presentation>
+    <resprocessing>
+      <outcomes><decvar maxvalue="1" minvalue="0" varname="SCORE" vartype="Integer"/></outcomes>
+      <respcondition>
+        <conditionvar><varequal respident="antwort">Paris</varequal></conditionvar>
+        <setvar varname="SCORE" action="Set">1</setvar>
+      </respcondition>
+    </resprocessing>
+  </item>
+</questestinterop>
 ```
+
+## Chatbots
 
 ## Forschungslücke?
 
-Schwachstelle bzw. ungelöstes Problem im aktuellen Stand
+Es fehlt eine **ausgereifte Lösung**, die den **gesamten Prozess** von der KI-unterstützten Aufgabenerstellung bis zum Import ins ILIAS abdeckt.
 
-1. ILIAS ist schwierig zu bedienen
-2. XML ist schwierig zu lesen
+::: {style="font-size: 60%;"}
+(Eine Schwachstelle bzw. ungelöstes Problem im aktuellen Stand der Technik)
+<https://www.scribbr.at/aufbau-und-gliederung-at/forschungsluecke/>
+:::
 
-# 2. Aufgabenstellung
+::: notes
+ganz klar benennen bzw. definieren,
+
+erforderlich um daraus Forschungsfragen abzuleiten
+:::
+
+# 2. Ziele
+
+## Forschungsfrage
 
 ## Aufgabenstellung
 
-Als Lehrkraft möchte ich Prüfungsfragen mit Markdown erstellen
-um sie ins ILIAS per QTI 3.0 zu importieren.
-
-1. **"weil's bequemer isch"**
-2. um Fragen per KI generieren zu lassen
 
 ## Anforderungsanalyse
 
-1. Nur die wichtigsten *Interaction Types* [@interactionTypes]
-    - Single Choice / Multiple Choice
-    - Zuordnungsaufgaben / Zuordnungsmatrix (Kprim-Fragen)
-    - Sortieraufgaben
-    - Freitext
-2. Well-formed und valides XML [@wellformedValidXml]
-3. Keine Ausgabe in andere Formate (HTML, PDF) erforderlich
+- Fragetypen
+- Prozessmodellierung
+- für "unser" ILIAS 10.11 (2026-10-03) mit QTI 1.2.1
+- keine anderen Learning Management Systeme (LMS)
+- keine anderen Formate (HTML, PDF, usw.)
+- keine Generative UI (siehe json-render)
+- kein Import bestehender Fragen
 
-## Berechtigte Kritik
+## Fragetypen
 
-- Warum nicht einfach das bestehende UI überarbeiten?
-- Warum nicht einfach die KI ein QTI-Paket erstellen lassen?
+:::: {.columns}
+::: {.column}
+- Single Choice
+- Multiple Choice
+- Kprim
+- ~~Fehler/Worte markieren~~
+- ~~Hotspot/Imagemap~~
+- Lückentext
+- Numerische Antwort
+:::
+
+::: {.column}
+- (Formelfrage)
+- Begriffe benennen
+- Anordnungsfrage vertikal
+- ~~Anordnungsfrage horizontal~~
+- Zuordnungsfrage
+- Freitext eingeben
+- ~~Datei hochladen~~
+- ~~Long Menu~~
+:::
+::::
+
+## Prozessmodellierung
 
 # 3. Methodik
 
 ## Herangehensweise
-
-![](assets/images/markdown2qti.png)
-
-:::{style="font-size:60%"}
-Post-Render [@postRender]
-
-1. Validieren mit `$ xmllint --noout --schema schema.xsd aufgaben.xml`
-2. Zusammen mit `imsmanifest.xml` zippen mit `zip -r ../aufgaben.zip .`
-:::
-
-## Quarto-Erweiterung
-
-techn. wissenschaftliches Publishing-System
-
-```
-quarto-project/
-├── _extensions
-│   └── qti
-│       ├── _extension.yml
-│       ├── filter.lua
-│       └── template.xml
-├── index.qmd
-└── _quarto.yml
-```
-
-- Custom Format
-- Pandoc Filter
-
-## xkcd on Standards [@XkcdStandards] 
-
-![](assets/images/standards_2x.png)
-
-siehe RFC 7763 [@RFC7763Text] und 7764 [@RFC7764Guidance]
-
-::: notes
-fragmentiert
-:::
-
-# Prüfungsfragen per KI generieren
-
-![](assets/images/skill.png)
-
-<!-- - KI per `/skill` instruieren [@skills]
-- Markdown ist leichter zu lesen als XML
-- **Evaluierung der Fragen muss trotzdem stattfinden**
-- die Quarto-Erweiterung verhält sich stets deterministisch -->
 
 # Literaturverzeichnis
 

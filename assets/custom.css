@@ -10,9 +10,26 @@
 }
 
 .reveal .progress span {
-	background-color: #2a76dd;
+  background-color: #2a76dd;
 }
 
-b, strong {
-	color: #2a76dd !important;
+b,
+strong {
+  /* color: #2a76dd !important; */
+}
+
+#title-slide * {
+  text-align: left !important;
+}
+
+#title-slide .quarto-title-authors {
+  justify-content: flex-start;
+}
+
+#title-slide .quarto-title-author {
+  padding: 0;
+}
+
+#title-slide .title {
+  font-size: 1.5em;
 }

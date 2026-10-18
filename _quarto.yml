@@ -1,8 +1,7 @@
-title: "Aufgabenerstellung mit Quarto und Export nach QTI 3.0 für ILIAS"
-subtitle: "Konzeption und prototypische Implementierung einer Erweiterung"
+title: "Entwicklung einer Webanwendung zur LLM-gestützten Aufgabenerstellung für ILIAS"
 author: "Manuel Koell"
 email: "mko7395@students.fhv.at"
-advisor: "Mag. Dr. Peter REITER, Bakk."
+advisor: "Dipl.-Ing. (FH) Walter RITTER"
 location: "Dornbirn"
 date: today
 date-format: "MMMM YYYY"
