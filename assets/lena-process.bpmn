@@ -15,7 +15,6 @@
                 <bpmn:flowNodeRef>Gateway_Revise</bpmn:flowNodeRef>
                 <bpmn:flowNodeRef>UserTask_ManualEdit</bpmn:flowNodeRef>
                 <bpmn:flowNodeRef>UserTask_AddSelection</bpmn:flowNodeRef>
-                <bpmn:flowNodeRef>Gateway_MoreQuestions</bpmn:flowNodeRef>
                 <bpmn:flowNodeRef>UserTask_Assemble</bpmn:flowNodeRef>
             </bpmn:lane>
             <bpmn:lane id="Lane_Scripts" name="Skripte">
@@ -25,7 +24,6 @@
             </bpmn:lane>
             <bpmn:lane id="Lane_LLM" name="LLM">
                 <bpmn:flowNodeRef>ServiceTask_LLMCreate</bpmn:flowNodeRef>
-                <bpmn:flowNodeRef>ServiceTask_LLMRevise</bpmn:flowNodeRef>
             </bpmn:lane>
         </bpmn:laneSet>
 
@@ -41,10 +39,7 @@
         <bpmn:exclusiveGateway id="Gateway_Revise" name="Nächster Schritt?"
             gatewayDirection="Diverging" />
         <bpmn:userTask id="UserTask_ManualEdit" name="Bearbeiten" />
-        <bpmn:serviceTask id="ServiceTask_LLMRevise" name="Verfeinern (Branching)" />
         <bpmn:userTask id="UserTask_AddSelection" name="Zum Fragenpool hinzufügen" />
-        <bpmn:exclusiveGateway id="Gateway_MoreQuestions" name="Auswahl vollständig?"
-            gatewayDirection="Diverging" />
         <bpmn:userTask id="UserTask_Assemble" name="Prüfung zusammenstellen" />
         <bpmn:serviceTask id="ServiceTask_Export" name="QTI exportieren" />
         <bpmn:endEvent id="EndEvent_End" name="Prüfung exportiert" />
@@ -66,18 +61,10 @@
             targetRef="Gateway_Revise" />
         <bpmn:sequenceFlow id="Flow_13" sourceRef="Gateway_Revise"
             targetRef="UserTask_ManualEdit" />
-        <bpmn:sequenceFlow id="Flow_14" sourceRef="Gateway_Revise"
-            targetRef="ServiceTask_LLMRevise" />
         <bpmn:sequenceFlow id="Flow_15" name="verwerfen" sourceRef="Gateway_Revise"
             targetRef="Gateway_Source" />
         <bpmn:sequenceFlow id="Flow_16" sourceRef="UserTask_ManualEdit" targetRef="Gateway_Created" />
-        <bpmn:sequenceFlow id="Flow_17" sourceRef="ServiceTask_LLMRevise"
-            targetRef="Gateway_Created" />
         <bpmn:sequenceFlow id="Flow_18" sourceRef="UserTask_AddSelection"
-            targetRef="Gateway_MoreQuestions" />
-        <bpmn:sequenceFlow id="Flow_19" name="ja" sourceRef="Gateway_MoreQuestions"
-            targetRef="Gateway_Source" />
-        <bpmn:sequenceFlow id="Flow_20" name="nein" sourceRef="Gateway_MoreQuestions"
             targetRef="UserTask_Assemble" />
         <bpmn:sequenceFlow id="Flow_21" sourceRef="UserTask_Assemble" targetRef="ServiceTask_Export" />
         <bpmn:sequenceFlow id="Flow_22" sourceRef="ServiceTask_Export" targetRef="EndEvent_End" />
@@ -127,15 +114,8 @@
             <bpmndi:BPMNShape id="Shape_ManualEdit" bpmnElement="UserTask_ManualEdit">
                 <dc:Bounds x="825" y="265" width="150" height="70" />
             </bpmndi:BPMNShape>
-            <bpmndi:BPMNShape id="Shape_LLMRevise" bpmnElement="ServiceTask_LLMRevise">
-                <dc:Bounds x="825" y="620" width="150" height="80" />
-            </bpmndi:BPMNShape>
             <bpmndi:BPMNShape id="Shape_AddSelection" bpmnElement="UserTask_AddSelection">
                 <dc:Bounds x="825" y="150" width="140" height="80" />
-            </bpmndi:BPMNShape>
-            <bpmndi:BPMNShape id="Shape_MoreQuestions" bpmnElement="Gateway_MoreQuestions"
-                isMarkerVisible="true">
-                <dc:Bounds x="1190" y="165" width="50" height="50" />
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape id="Shape_Assemble" bpmnElement="UserTask_Assemble">
                 <dc:Bounds x="1305" y="150" width="150" height="80" />
@@ -191,11 +171,6 @@
                 <di:waypoint x="760" y="300" />
                 <di:waypoint x="825" y="300" />
             </bpmndi:BPMNEdge>
-            <bpmndi:BPMNEdge id="Edge_14" bpmnElement="Flow_14">
-                <di:waypoint x="735" y="325" />
-                <di:waypoint x="735" y="660" />
-                <di:waypoint x="825" y="660" />
-            </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge id="Edge_15" bpmnElement="Flow_15">
                 <di:waypoint x="710" y="300" />
                 <di:waypoint x="710" y="245" />
@@ -211,25 +186,8 @@
                 <di:waypoint x="535" y="435" />
                 <di:waypoint x="510" y="435" />
             </bpmndi:BPMNEdge>
-            <bpmndi:BPMNEdge id="Edge_17" bpmnElement="Flow_17">
-                <di:waypoint x="975" y="660" />
-                <di:waypoint x="975" y="735" />
-                <di:waypoint x="455" y="735" />
-                <di:waypoint x="455" y="435" />
-                <di:waypoint x="460" y="435" />
-            </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge id="Edge_18" bpmnElement="Flow_18">
                 <di:waypoint x="965" y="190" />
-                <di:waypoint x="1190" y="190" />
-            </bpmndi:BPMNEdge>
-            <bpmndi:BPMNEdge id="Edge_19" bpmnElement="Flow_19">
-                <di:waypoint x="1215" y="165" />
-                <di:waypoint x="1215" y="85" />
-                <di:waypoint x="230" y="85" />
-                <di:waypoint x="230" y="165" />
-            </bpmndi:BPMNEdge>
-            <bpmndi:BPMNEdge id="Edge_20" bpmnElement="Flow_20">
-                <di:waypoint x="1240" y="190" />
                 <di:waypoint x="1305" y="190" />
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge id="Edge_21" bpmnElement="Flow_21">

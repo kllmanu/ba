@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 830" role="img"
     aria-labelledby="title desc">
     <title id="title">BPMN-Prozess zur Erstellung von Prüfungsfragen mit LLM</title>
-    <desc id="desc">Lehrende erstellen und prüfen Fragen. Skripte validieren die Daten und
-        exportieren als QTI; das LLM unterstützt mit Vorschlägen.</desc>
+    <desc id="desc">Lehrende erstellen und prüfen Fragen. Skripte exportieren als QTI; das LLM
+        unterstützt bei der Fragenerstellung.</desc>
     <defs>
         <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
             <path d="M0,0 L10,4 L0,8 Z" fill="#40515f" />
@@ -50,21 +50,15 @@
         <path class="flow" d="M685 190 H750" />
         <path class="flow" d="M660 215 V275" />
         <path class="flow" d="M685 300 H750" />
-        <path class="flow" d="M660 325 V660 H750" />
         <path class="flow" d="M635 300 V245 H190 V190 H130" />
         <path class="flow" d="M900 300 H950 V490 H460 V435 H435" />
-        <path class="flow" d="M900 660 V735 H380 V435 H385" />
-        <path class="flow" d="M890 190 H1115" />
-        <path class="flow" d="M1140 165 V85 H155 V165" />
-        <path class="flow" d="M1165 190 H1230" />
+        <path class="flow" d="M890 190 H1230" />
         <path class="flow" d="M1380 190 H1400 V435 H1420" />
         <path class="flow" d="M1570 460 H1620 V432" />
 
         <text class="flow-label" x="705" y="178">ja</text>
         <text class="flow-label" x="670" y="250">nein</text>
         <text class="flow-label" x="555" y="286">verwerfen</text>
-        <text class="flow-label" x="1147" y="145">ja</text>
-        <text class="flow-label" x="1180" y="178">nein</text>
 
         <circle class="event" cx="78" cy="190" r="18" />
         <path class="gateway" d="M155 165 L180 190 L155 215 L130 190 Z" />
@@ -74,9 +68,6 @@
         <path d="M652 182 L668 198 M668 182 L652 198" stroke="#40515f" stroke-width="2" />
         <path class="gateway" d="M660 275 L685 300 L660 325 L635 300 Z" />
         <path d="M652 292 L668 308 M668 292 L652 308" stroke="#40515f" stroke-width="2" />
-        <path class="gateway" d="M1140 165 L1165 190 L1140 215 L1115 190 Z" />
-        <path d="M1132 182 L1148 198 M1148 182 L1132 198" stroke="#40515f" stroke-width="2" />
-
         <rect class="user-task" x="220" y="150" width="140" height="80" rx="10" />
         <text class="label" x="290" y="184">
             <tspan x="290">Frage manuell</tspan>
@@ -102,11 +93,6 @@
         </text>
         <rect class="user-task" x="750" y="265" width="150" height="70" rx="10" />
         <text class="label" x="825" y="306">Bearbeiten</text>
-        <rect class="service-task" x="750" y="620" width="150" height="80" rx="10" />
-        <text class="label" x="825" y="654">
-            <tspan x="825">Verfeinern</tspan>
-            <tspan x="825" dy="22">(Branching)</tspan>
-        </text>
         <rect class="script-task" x="1420" y="420" width="150" height="80" rx="10" />
         <text class="label script-label" x="1495" y="454">
             <tspan x="1495">QTI</tspan>
