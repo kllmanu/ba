@@ -15,11 +15,13 @@
       .lane-label { fill: #e5ebef; }
       .user-task { fill: #fff; stroke: #246b78; stroke-width: 2; }
       .service-task { fill: #e2f1f2; stroke: #246b78; stroke-width: 2; }
+    .script-task { fill: #f3d9a5; stroke: #986515; stroke-width: 2; }
       .gateway { fill: #fff; stroke: #40515f; stroke-width: 2; }
       .flow { fill: none; stroke: #40515f; stroke-width: 2.2; marker-end: url(#arrow); }
-      .label { font: 17px sans-serif; fill: #20313b; text-anchor: middle; }
-    .lane-title { font: 700 19px sans-serif; fill: #20313b; text-anchor: middle; }
-      .flow-label { font: 15px sans-serif; fill: #40515f; }
+    .label { font: 19px sans-serif; fill: #20313b; text-anchor: middle; }
+    .script-label { fill: #2e2618; }
+        .lane-title { font: 700 20px sans-serif; fill: #20313b; text-anchor: middle; }
+            .flow-label { font: 17px sans-serif; fill: #40515f; }
       .event { fill: #fff; stroke: #40515f; stroke-width: 2.5; }
       .end-event { fill: #fff; stroke: #40515f; stroke-width: 4; }
     </style>
@@ -34,8 +36,7 @@
     <path d="M130 30 V800 M30 360 H1770 M30 560 H1770" stroke="#9aa8b3" stroke-width="1.5"
         fill="none" />
     <text class="lane-title" transform="translate(80 195) rotate(-90)">Lehrende</text>
-    <text class="lane-title" style="font-size: 15px" transform="translate(80 460) rotate(-90)">
-        Skripte</text>
+    <text class="lane-title" transform="translate(80 460) rotate(-90)">Skripte</text>
     <text class="lane-title" transform="translate(80 680) rotate(-90)">LLM</text>
 
     <g transform="translate(75 0)">
@@ -46,31 +47,29 @@
         <path class="flow" d="M370 660 H410 V460" />
         <path class="flow" d="M435 435 H475" />
         <path class="flow" d="M645 435 H680" />
-        <path class="flow" d="M730 435 H775 V115 H542 V150" />
-        <path class="flow" d="M705 460 V660 H750" />
+        <path class="flow" d="M730 435 H980 V115 H542 V150" />
+        <path class="flow" d="M705 460 V585 H825 V620" />
         <path class="flow" d="M615 190 H635" />
         <path class="flow" d="M685 190 H750" />
         <path class="flow" d="M660 215 V275" />
         <path class="flow" d="M685 300 H750" />
         <path class="flow" d="M660 325 V660 H750" />
-        <path class="flow" d="M635 300 H600 V540 H190 V215 H155" />
-        <path class="flow" d="M900 300 H925 V520 H410 V460" />
-        <path class="flow" d="M900 660 H965 V520 H410 V460" />
+        <path class="flow" d="M635 300 V245 H190 V190 H130" />
+        <path class="flow" d="M900 300 H950 V490 H460 V435 H435" />
+        <path class="flow" d="M900 660 V735 H380 V435 H385" />
         <path class="flow" d="M890 190 H1115" />
         <path class="flow" d="M1140 165 V85 H155 V165" />
         <path class="flow" d="M1165 190 H1230" />
-        <path class="flow" d="M1380 190 H1400 V460 H1420" />
+        <path class="flow" d="M1380 190 H1400 V435 H1420" />
         <path class="flow" d="M1570 460 H1620 V432" />
 
         <text class="flow-label" x="200" y="143" text-anchor="middle">manuell</text>
-        <text class="flow-label" x="168" y="590">mit LLM</text>
-        <text class="flow-label" x="742" y="420">gültig</text>
-        <text class="flow-label" x="716" y="490">ungültig</text>
+        <text class="flow-label" x="900" y="420">gültig</text>
+        <text class="flow-label" x="720" y="568">ungültig</text>
         <text class="flow-label" x="705" y="178">ja</text>
         <text class="flow-label" x="670" y="250">nein</text>
-        <text class="flow-label" x="710" y="286">manuell</text>
-        <text class="flow-label" x="675" y="395">mit LLM</text>
-        <text class="flow-label" x="570" y="286">verwerfen</text>
+        <text class="flow-label" x="690" y="286">manuell</text>
+        <text class="flow-label" x="555" y="286">verwerfen</text>
         <text class="flow-label" x="1147" y="145">ja</text>
         <text class="flow-label" x="1180" y="178">nein</text>
 
@@ -97,13 +96,13 @@
             <tspan x="295">Frage(n)</tspan>
             <tspan x="295" dy="22">generieren</tspan>
         </text>
-        <rect class="service-task" x="475" y="395" width="170" height="80" rx="10" />
-        <text class="label" x="560" y="429">
+        <rect class="script-task" x="475" y="395" width="170" height="80" rx="10" />
+        <text class="label script-label" x="560" y="429">
             <tspan x="560">JSON-Schema</tspan>
             <tspan x="560" dy="22">validieren</tspan>
         </text>
-        <text class="flow-label" x="410" y="398" text-anchor="middle">Daten liegen vor</text>
-        <text class="flow-label" x="705" y="395" text-anchor="middle">valide?</text>
+        <text class="flow-label" x="390" y="382" text-anchor="middle">Daten bereit</text>
+        <text class="flow-label" x="705" y="382" text-anchor="middle">valide?</text>
         <rect class="user-task" x="470" y="150" width="145" height="80" rx="10" />
         <text class="label" x="542" y="196">Frage prüfen</text>
         <rect class="user-task" x="750" y="150" width="140" height="80" rx="10" />
@@ -123,8 +122,8 @@
             <tspan x="825">Verfeinern</tspan>
             <tspan x="825" dy="22">(Branching)</tspan>
         </text>
-        <rect class="service-task" x="1420" y="420" width="150" height="80" rx="10" />
-        <text class="label" x="1495" y="454">
+        <rect class="script-task" x="1420" y="420" width="150" height="80" rx="10" />
+        <text class="label script-label" x="1495" y="454">
             <tspan x="1495">QTI</tspan>
             <tspan x="1495" dy="22">exportieren</tspan>
         </text>
