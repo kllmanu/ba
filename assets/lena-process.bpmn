@@ -20,8 +20,6 @@
             </bpmn:lane>
             <bpmn:lane id="Lane_Scripts" name="Skripte">
                 <bpmn:flowNodeRef>Gateway_Created</bpmn:flowNodeRef>
-                <bpmn:flowNodeRef>ServiceTask_Validate</bpmn:flowNodeRef>
-                <bpmn:flowNodeRef>Gateway_DataValid</bpmn:flowNodeRef>
                 <bpmn:flowNodeRef>ServiceTask_Export</bpmn:flowNodeRef>
                 <bpmn:flowNodeRef>EndEvent_End</bpmn:flowNodeRef>
             </bpmn:lane>
@@ -38,9 +36,6 @@
         <bpmn:serviceTask id="ServiceTask_LLMCreate" name="Frage(n) generieren" />
         <bpmn:exclusiveGateway id="Gateway_Created" name="Daten bereit"
             gatewayDirection="Converging" />
-        <bpmn:serviceTask id="ServiceTask_Validate" name="JSON-Schema validieren" />
-        <bpmn:exclusiveGateway id="Gateway_DataValid" name="Valide?"
-            gatewayDirection="Diverging" />
         <bpmn:userTask id="UserTask_Review" name="Frage prüfen" />
         <bpmn:exclusiveGateway id="Gateway_Suitable" name="Geeignet?" gatewayDirection="Diverging" />
         <bpmn:exclusiveGateway id="Gateway_Revise" name="Nächster Schritt?"
@@ -63,13 +58,7 @@
             targetRef="Gateway_Created" />
         <bpmn:sequenceFlow id="Flow_05" sourceRef="ServiceTask_LLMCreate"
             targetRef="Gateway_Created" />
-        <bpmn:sequenceFlow id="Flow_06" sourceRef="Gateway_Created" targetRef="ServiceTask_Validate" />
-        <bpmn:sequenceFlow id="Flow_07" sourceRef="ServiceTask_Validate"
-            targetRef="Gateway_DataValid" />
-        <bpmn:sequenceFlow id="Flow_08" name="ja" sourceRef="Gateway_DataValid"
-            targetRef="UserTask_Review" />
-        <bpmn:sequenceFlow id="Flow_09" name="nein" sourceRef="Gateway_DataValid"
-            targetRef="ServiceTask_LLMRevise" />
+        <bpmn:sequenceFlow id="Flow_06" sourceRef="Gateway_Created" targetRef="UserTask_Review" />
         <bpmn:sequenceFlow id="Flow_10" sourceRef="UserTask_Review" targetRef="Gateway_Suitable" />
         <bpmn:sequenceFlow id="Flow_11" name="ja" sourceRef="Gateway_Suitable"
             targetRef="UserTask_AddSelection" />
@@ -123,16 +112,6 @@
                 <dc:Bounds x="460" y="410" width="50" height="50" />
                 <bpmndi:BPMNLabel>
                     <dc:Bounds x="390" y="372" width="150" height="24" />
-                </bpmndi:BPMNLabel>
-            </bpmndi:BPMNShape>
-            <bpmndi:BPMNShape id="Shape_Validate" bpmnElement="ServiceTask_Validate">
-                <dc:Bounds x="550" y="395" width="170" height="80" />
-            </bpmndi:BPMNShape>
-            <bpmndi:BPMNShape id="Shape_DataValid" bpmnElement="Gateway_DataValid"
-                isMarkerVisible="true">
-                <dc:Bounds x="755" y="410" width="50" height="50" />
-                <bpmndi:BPMNLabel>
-                    <dc:Bounds x="745" y="372" width="70" height="24" />
                 </bpmndi:BPMNLabel>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape id="Shape_Review" bpmnElement="UserTask_Review">
@@ -192,24 +171,9 @@
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge id="Edge_06" bpmnElement="Flow_06">
                 <di:waypoint x="510" y="435" />
-                <di:waypoint x="550" y="435" />
-            </bpmndi:BPMNEdge>
-            <bpmndi:BPMNEdge id="Edge_07" bpmnElement="Flow_07">
-                <di:waypoint x="720" y="435" />
-                <di:waypoint x="755" y="435" />
-            </bpmndi:BPMNEdge>
-            <bpmndi:BPMNEdge id="Edge_08" bpmnElement="Flow_08">
-                <di:waypoint x="805" y="435" />
-                <di:waypoint x="1055" y="435" />
-                <di:waypoint x="1055" y="115" />
-                <di:waypoint x="617" y="115" />
-                <di:waypoint x="617" y="150" />
-            </bpmndi:BPMNEdge>
-            <bpmndi:BPMNEdge id="Edge_09" bpmnElement="Flow_09">
-                <di:waypoint x="780" y="460" />
-                <di:waypoint x="780" y="585" />
-                <di:waypoint x="975" y="585" />
-                <di:waypoint x="975" y="620" />
+                <di:waypoint x="525" y="435" />
+                <di:waypoint x="525" y="190" />
+                <di:waypoint x="545" y="190" />
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge id="Edge_10" bpmnElement="Flow_10">
                 <di:waypoint x="690" y="190" />

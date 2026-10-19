@@ -45,10 +45,7 @@
         <path class="flow" d="M155 215 V660 H220" />
         <path class="flow" d="M360 190 H410 V410" />
         <path class="flow" d="M370 660 H410 V460" />
-        <path class="flow" d="M435 435 H475" />
-        <path class="flow" d="M645 435 H680" />
-        <path class="flow" d="M730 435 H980 V115 H542 V150" />
-        <path class="flow" d="M705 460 V585 H825 V620" />
+        <path class="flow" d="M435 435 H450 V190 H470" />
         <path class="flow" d="M615 190 H635" />
         <path class="flow" d="M685 190 H750" />
         <path class="flow" d="M660 215 V275" />
@@ -63,8 +60,6 @@
         <path class="flow" d="M1380 190 H1400 V435 H1420" />
         <path class="flow" d="M1570 460 H1620 V432" />
 
-        <text class="flow-label" x="900" y="420">gültig</text>
-        <text class="flow-label" x="720" y="568">ungültig</text>
         <text class="flow-label" x="705" y="178">ja</text>
         <text class="flow-label" x="670" y="250">nein</text>
         <text class="flow-label" x="555" y="286">verwerfen</text>
@@ -79,8 +74,6 @@
         <path d="M652 182 L668 198 M668 182 L652 198" stroke="#40515f" stroke-width="2" />
         <path class="gateway" d="M660 275 L685 300 L660 325 L635 300 Z" />
         <path d="M652 292 L668 308 M668 292 L652 308" stroke="#40515f" stroke-width="2" />
-        <path class="gateway" d="M705 410 L730 435 L705 460 L680 435 Z" />
-        <path d="M697 427 L713 443 M713 427 L697 443" stroke="#40515f" stroke-width="2" />
         <path class="gateway" d="M1140 165 L1165 190 L1140 215 L1115 190 Z" />
         <path d="M1132 182 L1148 198 M1148 182 L1132 198" stroke="#40515f" stroke-width="2" />
 
@@ -94,13 +87,7 @@
             <tspan x="295">Frage(n)</tspan>
             <tspan x="295" dy="22">generieren</tspan>
         </text>
-        <rect class="script-task" x="475" y="395" width="170" height="80" rx="10" />
-        <text class="label script-label" x="560" y="429">
-            <tspan x="560">JSON-Schema</tspan>
-            <tspan x="560" dy="22">validieren</tspan>
-        </text>
         <text class="flow-label" x="390" y="382" text-anchor="middle">Daten bereit</text>
-        <text class="flow-label" x="705" y="382" text-anchor="middle">valide?</text>
         <rect class="user-task" x="470" y="150" width="145" height="80" rx="10" />
         <text class="label" x="542" y="196">Frage prüfen</text>
         <rect class="user-task" x="750" y="150" width="140" height="80" rx="10" />
