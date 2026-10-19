@@ -127,6 +127,8 @@ Prozedere von A-Z
 
 # 2. Ziele
 
+---
+
 1. Lehrkräfte sollen Prüfungsaufgaben mithilfe von KI erstellen, evaluieren, auswählen und überarbeiten können.
 2. Die Aufgaben sollen als valides QTI 1.2.1 exportierbar und in ILIAS 10.11 importierbar sein.
 3. Die Bedienbarkeit soll anhand typischer Aufgaben untersucht und mit dem bisherigen Erstellungsprozess in ILIAS verglichen werden.
