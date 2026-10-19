@@ -108,7 +108,7 @@ Verantwortungsvoller Umgang mit KI gilt auch für Lehrkräfte
 
 ## Forschungslücke?
 
-Es fehlt eine **ausgereifte Lösung**, die den **gesamten Prozess** von der KI-unterstützten Aufgabenerstellung, Evaluation, Auswahl bis zum Export für ILIAS abdeckt.
+Es fehlt eine ausgereifte, benutzerfreundliche Lösung, die den **gesamten Prozess** – von der Aufgabenerstellung (im Dialog mit einem Chatbot), über die Evaluation und Auswahl, bis hin zum Export für ILIAS – abdeckt
 
 ::: {style="font-size: 60%;"}
 (Eine Schwachstelle bzw. ungelöstes Problem im aktuellen Stand der Technik)
@@ -129,13 +129,13 @@ Prozedere von A-Z
 
 ---
 
-1. Lehrkräfte sollen Prüfungsaufgaben mithilfe von KI erstellen, evaluieren, auswählen und überarbeiten können.
+1. KI soll Lehrende bei der Erstellung, Evaluation, Auswahl und Überarbeitung von Prüfungsaufgaben unterstützen. (sie aber nicht ersetzen)
 2. Die Aufgaben sollen als valides QTI 1.2.1 exportierbar und in ILIAS 10.11 importierbar sein.
 3. Die Bedienbarkeit soll anhand typischer Aufgaben untersucht und mit dem bisherigen Erstellungsprozess in ILIAS verglichen werden.
 
 ## Forschungsfrage
 
-Wie kann eine Webanwendung Lehrkräfte bei der KI-gestützten Erstellung, Evaluation, Auswahl und Nachbearbeitung von Prüfungsaufgaben unterstützen und einen validen Export als QTI für ILIAS ermöglichen?
+Wie kann eine Webanwendung Lehrende bei der KI-unterstützten Erstellung, Evaluation, Auswahl und Nachbearbeitung von Prüfungsaufgaben unterstützen und einen validen Export als QTI für ILIAS ermöglichen?
 
  Wie verändern sich die Interaktionskosten gegenüber dem bisherigen Erstellungsprozess in ILIAS?
 
