@@ -139,11 +139,11 @@ wichtig: NICHT ersetzen
 
 ## Forschungsfrage
 
-::: {style="font-size: 60%;"}
+::: {style="font-size: 80%;"}
 Wie kann eine Webanwendung Lehrende bei der Erstellung, Evaluation, Auswahl und Nachbearbeitung  von Prüfungsaufgaben (im Dialog mit einem Chatbot) unterstützen und einen funktionierenden Export als QTI für ILIAS ermöglichen?
 
- Wie verändern sich die Interaktionskosten gegenüber dem bisherigen Erstellungsprozess in ILIAS?
- :::
+Wie verändern sich die Interaktionskosten gegenüber dem bisherigen Erstellungsprozess in ILIAS?
+:::
 
 ## Anforderungsanalyse
 
