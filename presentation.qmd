@@ -127,18 +127,20 @@ Prozedere von A-Z
 
 # 2. Ziele
 
-## Aufgabenstellung
-
-**TL;DR:** LENA hilft Lehrkräften, Prüfungsaufgaben mit KI zu erstellen, zu überarbeiten und als valides QTI-Paket für ILIAS zu exportieren.
+1. Lehrkräfte sollen Prüfungsaufgaben mithilfe von KI erstellen, evaluieren, auswählen und überarbeiten können.
+2. Die Aufgaben sollen als valides QTI 1.2.1 exportierbar und in ILIAS 10.11 importierbar sein.
+3. Die Bedienbarkeit soll anhand typischer Aufgaben untersucht und mit dem bisherigen Erstellungsprozess in ILIAS verglichen werden.
 
 ## Forschungsfrage
 
-Wie kann ein System Lehrkräfte bei der KI-gestützten Erstellung, Evaluation, Nachbearbeitung von Aufgaben unterstützen und den Export als valides QTI-Paket für ILIAS ermöglichen?
+Wie kann eine Webanwendung Lehrkräfte bei der KI-gestützten Erstellung, Evaluation, Auswahl und Nachbearbeitung von Prüfungsaufgaben unterstützen und einen validen Export als QTI für ILIAS ermöglichen?
+
+ Wie verändern sich die Interaktionskosten gegenüber dem bisherigen Erstellungsprozess in ILIAS?
 
 ## Anforderungsanalyse
 
-- Fragetypen
-- Prozessmodellierung
+- **Fragetypen**
+- **Prozessmodellierung**
 - für "unser" ILIAS 10.11 (2026-10-03) mit QTI 1.2.1
 - keine anderen Learning Management Systeme (LMS)
 - keine anderen Formate (HTML, PDF, usw.)
