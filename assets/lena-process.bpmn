@@ -55,7 +55,7 @@
         <bpmn:endEvent id="EndEvent_End" name="Prüfung exportiert" />
 
         <bpmn:sequenceFlow id="Flow_01" sourceRef="StartEvent_Start" targetRef="Gateway_Source" />
-        <bpmn:sequenceFlow id="Flow_02" name="manuell" sourceRef="Gateway_Source"
+        <bpmn:sequenceFlow id="Flow_02" sourceRef="Gateway_Source"
             targetRef="UserTask_ManualCreate" />
         <bpmn:sequenceFlow id="Flow_03" sourceRef="Gateway_Source"
             targetRef="ServiceTask_LLMCreate" />
@@ -75,7 +75,7 @@
             targetRef="UserTask_AddSelection" />
         <bpmn:sequenceFlow id="Flow_12" name="nein" sourceRef="Gateway_Suitable"
             targetRef="Gateway_Revise" />
-        <bpmn:sequenceFlow id="Flow_13" name="manuell" sourceRef="Gateway_Revise"
+        <bpmn:sequenceFlow id="Flow_13" sourceRef="Gateway_Revise"
             targetRef="UserTask_ManualEdit" />
         <bpmn:sequenceFlow id="Flow_14" sourceRef="Gateway_Revise"
             targetRef="ServiceTask_LLMRevise" />

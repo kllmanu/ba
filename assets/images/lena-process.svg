@@ -63,12 +63,10 @@
         <path class="flow" d="M1380 190 H1400 V435 H1420" />
         <path class="flow" d="M1570 460 H1620 V432" />
 
-        <text class="flow-label" x="200" y="143" text-anchor="middle">manuell</text>
         <text class="flow-label" x="900" y="420">gültig</text>
         <text class="flow-label" x="720" y="568">ungültig</text>
         <text class="flow-label" x="705" y="178">ja</text>
         <text class="flow-label" x="670" y="250">nein</text>
-        <text class="flow-label" x="690" y="286">manuell</text>
         <text class="flow-label" x="555" y="286">verwerfen</text>
         <text class="flow-label" x="1147" y="145">ja</text>
         <text class="flow-label" x="1180" y="178">nein</text>
