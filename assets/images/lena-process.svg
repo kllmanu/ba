@@ -52,22 +52,30 @@
         <path class="flow" d="M685 300 H750" />
         <path class="flow" d="M635 300 V245 H190 V190 H130" />
         <path class="flow" d="M900 300 H950 V490 H460 V435 H435" />
-        <path class="flow" d="M890 190 H1230" />
+        <path class="flow" d="M890 190 H1115" />
+        <path class="flow" d="M1140 165 V85 H155 V165" />
+        <path class="flow" d="M1165 190 H1230" />
         <path class="flow" d="M1380 190 H1400 V435 H1420" />
-        <path class="flow" d="M1570 460 H1620 V432" />
+        <path class="flow" d="M1570 460 H1620" />
 
         <text class="flow-label" x="705" y="178">ja</text>
         <text class="flow-label" x="670" y="250">nein</text>
         <text class="flow-label" x="555" y="286">verwerfen</text>
+        <text class="flow-label" x="1147" y="145">nein</text>
+        <text class="flow-label" x="1180" y="178">ja</text>
+        <text class="flow-label" x="1140" y="245" text-anchor="middle">Auswahl vollständig?</text>
 
         <circle class="event" cx="78" cy="190" r="18" />
         <path class="gateway" d="M155 165 L180 190 L155 215 L130 190 Z" />
+        <path d="M147 182 L163 198 M163 182 L147 198" stroke="#40515f" stroke-width="2" />
         <path class="gateway" d="M410 410 L435 435 L410 460 L385 435 Z" />
         <path d="M402 427 L418 443 M418 427 L402 443" stroke="#40515f" stroke-width="2" />
         <path class="gateway" d="M660 165 L685 190 L660 215 L635 190 Z" />
         <path d="M652 182 L668 198 M668 182 L652 198" stroke="#40515f" stroke-width="2" />
         <path class="gateway" d="M660 275 L685 300 L660 325 L635 300 Z" />
         <path d="M652 292 L668 308 M668 292 L652 308" stroke="#40515f" stroke-width="2" />
+        <path class="gateway" d="M1140 165 L1165 190 L1140 215 L1115 190 Z" />
+        <path d="M1132 182 L1148 198 M1148 182 L1132 198" stroke="#40515f" stroke-width="2" />
         <rect class="user-task" x="220" y="150" width="140" height="80" rx="10" />
         <text class="label" x="290" y="184">
             <tspan x="290">Frage manuell</tspan>
@@ -78,7 +86,7 @@
             <tspan x="295">Frage(n)</tspan>
             <tspan x="295" dy="22">generieren</tspan>
         </text>
-        <text class="flow-label" x="390" y="382" text-anchor="middle">Daten bereit</text>
+        <text class="flow-label" x="370" y="441" text-anchor="end">Daten bereit</text>
         <rect class="user-task" x="470" y="150" width="145" height="80" rx="10" />
         <text class="label" x="542" y="196">Frage prüfen</text>
         <rect class="user-task" x="750" y="150" width="140" height="80" rx="10" />
@@ -98,6 +106,6 @@
             <tspan x="1495">QTI</tspan>
             <tspan x="1495" dy="22">exportieren</tspan>
         </text>
-        <circle class="end-event" cx="1638" cy="432" r="18" />
+        <circle class="end-event" cx="1638" cy="460" r="18" />
     </g>
 </svg>

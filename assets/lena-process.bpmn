@@ -15,6 +15,7 @@
                 <bpmn:flowNodeRef>Gateway_Revise</bpmn:flowNodeRef>
                 <bpmn:flowNodeRef>UserTask_ManualEdit</bpmn:flowNodeRef>
                 <bpmn:flowNodeRef>UserTask_AddSelection</bpmn:flowNodeRef>
+                <bpmn:flowNodeRef>Gateway_MoreQuestions</bpmn:flowNodeRef>
                 <bpmn:flowNodeRef>UserTask_Assemble</bpmn:flowNodeRef>
             </bpmn:lane>
             <bpmn:lane id="Lane_Scripts" name="Skripte">
@@ -40,6 +41,8 @@
             gatewayDirection="Diverging" />
         <bpmn:userTask id="UserTask_ManualEdit" name="Bearbeiten" />
         <bpmn:userTask id="UserTask_AddSelection" name="Zum Fragenpool hinzufügen" />
+        <bpmn:exclusiveGateway id="Gateway_MoreQuestions" name="Auswahl vollständig?"
+            gatewayDirection="Diverging" />
         <bpmn:userTask id="UserTask_Assemble" name="Prüfung zusammenstellen" />
         <bpmn:serviceTask id="ServiceTask_Export" name="QTI exportieren" />
         <bpmn:endEvent id="EndEvent_End" name="Prüfung exportiert" />
@@ -65,6 +68,10 @@
             targetRef="Gateway_Source" />
         <bpmn:sequenceFlow id="Flow_16" sourceRef="UserTask_ManualEdit" targetRef="Gateway_Created" />
         <bpmn:sequenceFlow id="Flow_18" sourceRef="UserTask_AddSelection"
+            targetRef="Gateway_MoreQuestions" />
+        <bpmn:sequenceFlow id="Flow_19" name="nein" sourceRef="Gateway_MoreQuestions"
+            targetRef="Gateway_Source" />
+        <bpmn:sequenceFlow id="Flow_20" name="ja" sourceRef="Gateway_MoreQuestions"
             targetRef="UserTask_Assemble" />
         <bpmn:sequenceFlow id="Flow_21" sourceRef="UserTask_Assemble" targetRef="ServiceTask_Export" />
         <bpmn:sequenceFlow id="Flow_22" sourceRef="ServiceTask_Export" targetRef="EndEvent_End" />
@@ -98,7 +105,7 @@
                 isMarkerVisible="true">
                 <dc:Bounds x="460" y="410" width="50" height="50" />
                 <bpmndi:BPMNLabel>
-                    <dc:Bounds x="390" y="372" width="150" height="24" />
+                    <dc:Bounds x="335" y="423" width="110" height="24" />
                 </bpmndi:BPMNLabel>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape id="Shape_Review" bpmnElement="UserTask_Review">
@@ -117,6 +124,13 @@
             <bpmndi:BPMNShape id="Shape_AddSelection" bpmnElement="UserTask_AddSelection">
                 <dc:Bounds x="825" y="150" width="140" height="80" />
             </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape id="Shape_MoreQuestions" bpmnElement="Gateway_MoreQuestions"
+                isMarkerVisible="true">
+                <dc:Bounds x="1190" y="165" width="50" height="50" />
+                <bpmndi:BPMNLabel>
+                    <dc:Bounds x="1140" y="225" width="150" height="24" />
+                </bpmndi:BPMNLabel>
+            </bpmndi:BPMNShape>
             <bpmndi:BPMNShape id="Shape_Assemble" bpmnElement="UserTask_Assemble">
                 <dc:Bounds x="1305" y="150" width="150" height="80" />
             </bpmndi:BPMNShape>
@@ -124,7 +138,7 @@
                 <dc:Bounds x="1495" y="420" width="150" height="80" />
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape id="Shape_End" bpmnElement="EndEvent_End">
-                <dc:Bounds x="1695" y="414" width="36" height="36" />
+                <dc:Bounds x="1695" y="442" width="36" height="36" />
             </bpmndi:BPMNShape>
             <bpmndi:BPMNEdge id="Edge_01" bpmnElement="Flow_01">
                 <di:waypoint x="171" y="190" />
@@ -188,6 +202,16 @@
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge id="Edge_18" bpmnElement="Flow_18">
                 <di:waypoint x="965" y="190" />
+                <di:waypoint x="1190" y="190" />
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge id="Edge_19" bpmnElement="Flow_19">
+                <di:waypoint x="1215" y="165" />
+                <di:waypoint x="1215" y="85" />
+                <di:waypoint x="230" y="85" />
+                <di:waypoint x="230" y="165" />
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge id="Edge_20" bpmnElement="Flow_20">
+                <di:waypoint x="1240" y="190" />
                 <di:waypoint x="1305" y="190" />
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge id="Edge_21" bpmnElement="Flow_21">
@@ -199,7 +223,6 @@
             <bpmndi:BPMNEdge id="Edge_22" bpmnElement="Flow_22">
                 <di:waypoint x="1645" y="460" />
                 <di:waypoint x="1695" y="460" />
-                <di:waypoint x="1695" y="432" />
             </bpmndi:BPMNEdge>
         </bpmndi:BPMNPlane>
     </bpmndi:BPMNDiagram>
