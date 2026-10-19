@@ -1194,7 +1194,7 @@ display:block!important;
 </section>
 <section id="qti" class="slide level2">
 <h2>QTI</h2>
-<p>Question and Test Interoperability (QTI) specification</p>
+<p>Question and Test Interoperability (QTI) specification<span class="citation" data-cites="QuestionTestInteroperability"><a href="#/literaturverzeichnis" role="doc-biblioref" onclick>[3]</a></span></p>
 <ul>
 <li>einheitliches XML-Format, plattformunabhängig (lol)</li>
 <li>für Fragen, Antworten, Auswertungen, Prüfungen</li>
@@ -1366,8 +1366,56 @@ display:block!important;
 <h1>3. Methodik</h1>
 
 </section>
-<section id="herangehensweise" class="slide level2">
-<h2>Herangehensweise</h2>
+<section id="prototypische-umsetzung" class="slide level2">
+<h2>Prototypische Umsetzung</h2>
+<ul>
+<li>React + Serverless Functions (Vercel)</li>
+<li><code>useChat</code> und <code>useObject</code> hooks<span class="citation" data-cites="AISDKUI"><a href="#/literaturverzeichnis" role="doc-biblioref" onclick>[4]</a></span></li>
+<li>JSON Schema<span class="citation" data-cites="JSONSchemaSpecification"><a href="#/literaturverzeichnis" role="doc-biblioref" onclick>[5]</a></span></li>
+</ul>
+<aside class="notes">
+<p>Wie baue ich die Lösung?</p>
+<style type="text/css">
+span.MJX_Assistive_MathML {
+position:absolute!important;
+clip: rect(1px, 1px, 1px, 1px);
+padding: 1px 0 0 0!important;
+border: 0!important;
+height: 1px!important;
+width: 1px!important;
+overflow: hidden!important;
+display:block!important;
+}</style></aside>
+</section>
+<section id="evaluierung" class="slide level2">
+<h2>Evaluierung</h2>
+<dl>
+<dt>Technisch</dt>
+<dd>
+Lassen sich die exportierten Aufgaben in ILIAS importieren?
+</dd>
+<dt>Bedienbarkeit</dt>
+<dd>
+Lehrende bearbeiten typische Aufgaben mit dem Prototyp und mit ILIAS.
+</dd>
+<dt>Vergleich</dt>
+<dd>
+zB Bearbeitungszeit, Interaktionskosten, Fehlerquote, subjektiv wahrgenommener Aufwand
+</dd>
+</dl>
+<aside class="notes">
+<p>Wie überprüfe ich die Lösung?</p>
+<style type="text/css">
+span.MJX_Assistive_MathML {
+position:absolute!important;
+clip: rect(1px, 1px, 1px, 1px);
+padding: 1px 0 0 0!important;
+border: 0!important;
+height: 1px!important;
+width: 1px!important;
+overflow: hidden!important;
+display:block!important;
+}</style></aside>
 </section></section>
 <section id="literaturverzeichnis" class="title-slide slide level1 smaller scrollable">
 <h1>Literaturverzeichnis</h1>
@@ -1377,6 +1425,15 @@ display:block!important;
 </div>
 <div id="ref-InteractionCostDefinition" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[2] </div><div class="csl-right-inline"><span>„Interaction <span>Cost</span>: <span>Definition</span>“</span>, <em>Nielsen Norman Group</em>. https://www.nngroup.com/articles/interaction-cost-definition/.</div>
+</div>
+<div id="ref-QuestionTestInteroperability" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline"><span>„Question &amp; <span>Test Interoperability</span>® <span>1EdTech</span>“</span>. https://www.1edtech.org/standards/qti.</div>
+</div>
+<div id="ref-AISDKUI" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[4] </div><div class="csl-right-inline"><span>„<span>AI SDK UI</span>“</span>, <em>AI SDK</em>. https://ai-sdk.dev/docs/ai-sdk-ui/overview.</div>
+</div>
+<div id="ref-JSONSchemaSpecification" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[5] </div><div class="csl-right-inline"><span>„<span>JSON Schema</span> - <span>Specification</span> [#section]“</span>. https://json-schema.org/specification.</div>
 </div>
 </div>
 

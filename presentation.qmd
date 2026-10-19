@@ -51,7 +51,7 @@ man geht dann doch einen anderen Weg
 
 ## QTI
 
-Question and Test Interoperability (QTI) specification
+Question and Test Interoperability (QTI) specification[@QuestionTestInteroperability]
 
 - einheitliches XML-Format, plattformunabhängig (lol)
 - für Fragen, Antworten, Auswertungen, Prüfungen
@@ -186,7 +186,31 @@ Wie verändern sich die Interaktionskosten gegenüber dem bisherigen Erstellungs
 
 # 3. Methodik
 
-## Herangehensweise
+## Prototypische Umsetzung
+
+- React + Serverless Functions (Vercel)
+- `useChat` und `useObject` hooks[@AISDKUI]
+- JSON Schema[@JSONSchemaSpecification]
+
+::: notes
+Wie baue ich die Lösung?
+:::
+
+## Evaluierung
+
+Technisch
+: Lassen sich die exportierten Aufgaben in ILIAS importieren?
+
+Bedienbarkeit
+: Lehrende bearbeiten typische Aufgaben mit dem Prototyp und mit ILIAS.
+
+Vergleich
+: zB Bearbeitungszeit, Interaktionskosten, Fehlerquote, subjektiv wahrgenommener Aufwand
+
+::: notes
+Wie überprüfe ich die Lösung?
+:::
+
 
 # Literaturverzeichnis
 
