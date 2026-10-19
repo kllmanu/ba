@@ -43,6 +43,10 @@ Hohe Interaktionskosten [@InteractionCostDefinition]
 
 ![](assets/images/ux-vs-design.jpg)
 
+::: notes
+man geht dann doch einen anderen Weg
+::: 
+
 ---
 
 ## QTI
@@ -96,9 +100,15 @@ jeder kocht sein eigenes Süppchen;
 
 ## Chatbots
 
+![](assets/images/chatbot.png)
+
+::: notes
+Verantwortungsvoller Umgang mit KI gilt auch für Lehrkräfte
+:::
+
 ## Forschungslücke?
 
-Es fehlt eine **ausgereifte Lösung**, die den **gesamten Prozess** von der KI-unterstützten Aufgabenerstellung bis zum Import ins ILIAS abdeckt.
+Es fehlt eine **ausgereifte Lösung**, die den **gesamten Prozess** von der KI-unterstützten Aufgabenerstellung, Evaluation, Auswahl bis zum Export für ILIAS abdeckt.
 
 ::: {style="font-size: 60%;"}
 (Eine Schwachstelle bzw. ungelöstes Problem im aktuellen Stand der Technik)
@@ -108,12 +118,19 @@ Es fehlt eine **ausgereifte Lösung**, die den **gesamten Prozess** von der KI-u
 ::: notes
 ganz klar benennen bzw. definieren,
 
-erforderlich um daraus Forschungsfragen abzuleiten
+der Auffassung sein
+
+erforderlich um daraus Forschungsfrage abzuleiten
+
+Prozedere von A-Z
 :::
 
 # 2. Ziele
 
 ## Forschungsfrage
+
+Wie kann ein System Lehrkräfte bei der KI-gestützten Erstellung, Evaluation, Nachbearbeitung von Aufgaben unterstützen und den Export als valides QTI-Paket für ILIAS ermöglichen?
+
 
 ## Aufgabenstellung
 
