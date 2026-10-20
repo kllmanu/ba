@@ -127,11 +127,10 @@ Prozedere von A-Z
 
 # 2. Ziele
 
----
 
-1. Webanwendung zur chatbasierten Unterstützung bei Erstellung, Evaluation, Auswahl und Überarbeitung von Prüfungsaufgaben entwickeln.
-2. Einen validen QTI-1.2.1-Export für ILIAS 10.11 ermöglichen.
-3. Bedienbarkeit und Interaktionskosten im Vergleich zum bisherigen ILIAS-Prozess evaluieren.
+1. Lehrende dabei unterstützen, Prüfungsaufgaben mit KI zu erstellen, zu prüfen, auszuwählen und zu überarbeiten.
+2. Die Aufgaben als QTI-Datei nach ILIAS exportieren.
+3. Den Aufwand mit dem bisherigen Erstellungsprozess in ILIAS vergleichen.
 
 ::: notes
 wichtig: NICHT ersetzen
