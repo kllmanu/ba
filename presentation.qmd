@@ -127,6 +127,7 @@ Prozedere von A-Z
 
 # 2. Ziele
 
+---
 
 1. Lehrende dabei unterstützen, Prüfungsaufgaben mit KI zu erstellen, zu prüfen, auszuwählen und zu überarbeiten.
 2. Die Aufgaben als QTI-Datei nach ILIAS exportieren.
