@@ -140,9 +140,14 @@ wichtig: NICHT ersetzen
 ## Forschungsfrage
 
 ::: {style="font-size: 80%;"}
-Wie kann eine Webanwendung Lehrende bei der Erstellung, Evaluation, Auswahl und Nachbearbeitung  von Prüfungsaufgaben (im Dialog mit einem Chatbot) unterstützen und einen funktionierenden Export als QTI für ILIAS ermöglichen?
+Wie verändert eine KI-gestützte Anwendung den Aufwand für Lehrende bei der 
 
-Wie verändern sich die Interaktionskosten gegenüber dem bisherigen Erstellungsprozess in ILIAS?
+- Erstellung,
+- Evaluation,
+- Bearbeitung
+- und Auswahl
+
+von Prüfungsaufgaben im Vergleich zu ILIAS?
 :::
 
 ## Anforderungsanalyse
@@ -188,7 +193,7 @@ Wie verändern sich die Interaktionskosten gegenüber dem bisherigen Erstellungs
 
 ## Prototypische Umsetzung
 
-- React + Serverless Functions (Vercel)
+- React / Next.js
 - `useChat` und `useObject` hooks[@AISDKUI]
 - JSON Schema[@JSONSchemaSpecification]
 - Vercel AI Gateway
